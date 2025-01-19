@@ -47,7 +47,7 @@ local SectionCS = TabscrCS:CreateSection("All These Universal Scripts Are Client
 local TabsMY = Window:CreateTab("Hotel Elephant Give 📜", 0)
 local SectionMY = TabsMY:CreateSection("WARNING THERE ARE SHIT TONES OF MONEY OPTIONS SO SPENDUP")
 
-local Tabalit = Window:CreateTab("Voice Chat Options 📜", 0)
+local Tabalit = Window:CreateTab("Voice Chat Options 🔊", 0)
 local Sectionalit = Tabalit:CreateSection("For the unban u cannot use it when leaving the game  or exiting roblox and you will be again banned so as soon as you get banned run the script! 📜")
 
 local TabsSettings = Window:CreateTab("settings ⚙️", 0)
@@ -81,7 +81,7 @@ createButton(TabscrCS, "Universal Grab Knife V4", "https://raw.githubusercontent
 -- Buttons for MY Tab
 createButton(TabsMY, "Universal ESP WITH HP AND NAME", "https://pastebin.com/raw/sdg1EUwB")
 
-createButton(Tabalit, "VC UNBAN", "https://pastebin.com/raw/sdg1EUwB")
+createButton(Tabalit, "VC UNBAN", "https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/VCUNBAN%20MODULE")
 
 -- Dropdown for Player Name in MY Tab
 local selectedPlayerName = nil
