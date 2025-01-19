@@ -1,0 +1,209 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Devil60 Premium 👑",
+    Icon = 0,
+    LoadingTitle = "Devil60 Universal Premium 👑",
+    LoadingSubtitle = "by Devil60 🍀",
+    Theme = "Amethyst",
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false,
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = "saves",
+        FileName = "Big Hub"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "noinvitelink",
+        RememberJoins = true
+    },
+    KeySystem = false,
+    KeySettings = {
+        Title = "Devil60 universal",
+        Subtitle = "Key System",
+        Note = "No method of obtaining the key is provided",
+        FileName = "Key",
+        SaveKey = true,
+        GrabKeyFromSite = false,
+        Key = {"Hey"}
+    }
+})
+
+-- Tabs
+local TabHOME = Window:CreateTab("Home 🏠", 0)
+local SectionHOME = TabHOME:CreateSection("Home")
+
+local Paragraph = TabHOME:CreateParagraph({
+    Title = "Welcome To Devil60 Universal Premium",
+    Content = "Hello Guys This Is My First Ever Script Hub More Games Are Releasing Soon I Just Wanted To Show What I Can Do With Remote Functions EG. Hotel Elephant With The Remote Money Feature I Will Be Publishing More Scripts Soon And More Menus / Tab Updates Soon!"
+})
+
+local Tabscr = Window:CreateTab("SS scripts 📜", 0)
+local Section = Tabscr:CreateSection("All These Universal Scripts Are ServerSided So Others Can See!")
+
+local TabscrCS = Window:CreateTab("CS scripts 📜", 0)
+local SectionCS = TabscrCS:CreateSection("All These Universal Scripts Are ClientSided So Others Cant See!")
+
+local TabsMY = Window:CreateTab("Hotel Elephant Give 📜", 0)
+local SectionMY = TabsMY:CreateSection("WARNING THERE ARE SHIT TONES OF MONEY OPTIONS SO SPENDUP")
+
+local Tabalit = Window:CreateTab("Voice Chat Options 📜", 0)
+local Sectionalit = Tabalit:CreateSection("For the unban u cannot use it when leaving the game  or exiting roblox and you will be again banned so as soon as you get banned run the script! 📜")
+
+local TabsSettings = Window:CreateTab("settings ⚙️", 0)
+local SectionSettings = TabsSettings:CreateSection("change theme")
+
+-- Buttons for SS Tab
+local function createButton(tab, name, url)
+    return tab:CreateButton({
+        Name = name,
+        Callback = function()
+            loadstring(game:HttpGet(url))()
+        end
+    })
+end
+
+createButton(TabHOME, "Destroy", "https://sirius.menu/rayfield")
+createButton(Tabscr, "Universal HUG R15 R6", "https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG")
+createButton(Tabscr, "Universal Usercreation V4 key is cartiwontdrop", "https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua")
+createButton(Tabscr, "Universal Chat Art Press E", "https://raw.githubusercontent.com/AKadminlol/Chatdraw/refs/heads/main/Chattdraw")
+createButton(Tabscr, "Universal Invisible GUI Seversided", "https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/UniversalInvis.lua")
+createButton(Tabscr, "Universal Global Chat Join Anyone", "https://raw.githubusercontent.com/ThacG/Xyros/refs/heads/main/test")
+createButton(Tabscr, "Universal Game Prober", "https://raw.githubusercontent.com/Joystickplays/gameprober-lua/main/gp.lua")
+createButton(Tabscr, "Universal DEX Explorer", "https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt")
+createButton(Tabscr, "Universal Infinite Yeild FE", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+
+-- Buttons for CS Tab
+createButton(TabscrCS, "Universal C00LKID GUI", "game:GetObjects('rbxassetid://8127297852')[1].Source")
+createButton(TabscrCS, "Universal Gun", "https://pastebin.com/raw/cYzyGWyY")
+createButton(TabscrCS, "Universal Grab Knife V4", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua")
+
+-- Buttons for MY Tab
+createButton(TabsMY, "Universal ESP WITH HP AND NAME", "https://pastebin.com/raw/sdg1EUwB")
+
+createButton(Tabalit, "VC UNBAN", "https://pastebin.com/raw/sdg1EUwB")
+
+-- Dropdown for Player Name in MY Tab
+local selectedPlayerName = nil
+local playerDropdown = TabsMY:CreateDropdown({
+    Name = "Select Player",
+    Options = {}, -- Initially empty list
+    CurrentOption = {"Select a Player"},
+    MultipleOptions = false,
+    Flag = "PlayerDropdown",
+    Callback = function(selectedPlayer)
+        selectedPlayerName = selectedPlayer
+    end
+})
+
+-- Populate player dropdown
+local function updatePlayerList()
+    local playerList = {}
+    for _, player in pairs(game.Players:GetPlayers()) do
+        table.insert(playerList, player.Name)
+    end
+    playerDropdown:UpdateList(playerList)
+    -- Set the default player selection
+    if not selectedPlayerName and #playerList > 0 then
+        selectedPlayerName = playerList[1]
+    end
+end
+
+game.Players.PlayerAdded:Connect(updatePlayerList)
+game.Players.PlayerRemoving:Connect(updatePlayerList)
+
+-- Slider for Money Value in MY Tab
+local moneySlider = TabsMY:CreateInput({
+    Name = "Money Value",
+    CurrentValue = "",
+    PlaceholderText = "Place Money Value Here",
+    RemoveTextAfterFocusLost = false,
+    Flag = "Input2",
+    Callback = function(Text)
+        -- Update function if needed
+    end
+})
+
+-- Apply Button in MY Tab
+local applyButton = TabsMY:CreateButton({
+    Name = "Apply Changes",
+    Callback = function()
+        local playerName = selectedPlayerName
+        local moneyValue = tonumber(moneySlider.Text)
+
+        if not playerName or playerName == "" then
+            Rayfield:Notify({Title = "Error", Content = "Player name cannot be empty!", Duration = 3})
+            return
+        end
+
+        if not moneyValue or moneyValue <= 0 then
+            Rayfield:Notify({Title = "Error", Content = "Invalid money value!", Duration = 3})
+            return
+        end
+
+        local function findPlayerByName(name)
+            for _, player in ipairs(game.Players:GetPlayers()) do
+                if player.Name == name then
+                    return player
+                end
+            end
+            return nil
+        end
+
+        local player = findPlayerByName(playerName)
+        
+        if player then
+            game:GetService("ReplicatedStorage").MoneyRequest:FireServer(false, moneyValue, "Cash", player)
+            Rayfield:Notify({Title = "Success", Content = "Money sent to player!", Duration = 3})
+        else
+            Rayfield:Notify({Title = "Error", Content = "Player not found!", Duration = 3})
+        end
+    end
+})
+
+-- Give All Money buttons
+local function giveMoney(amount)
+    return TabsMY:CreateButton({
+        Name = "Give All " .. amount,
+        Callback = function()
+            local bool = false
+            local remote = "Cash"
+            for _, v in pairs(game.Players:GetChildren()) do
+                game:GetService("ReplicatedStorage").MoneyRequest:FireServer(bool, amount, remote, v)
+            end
+        end
+    })
+end
+
+giveMoney(1000)
+giveMoney(10000)
+giveMoney(100000)
+giveMoney(500000)
+giveMoney(1000000)
+giveMoney(5000000)
+giveMoney(10000000)
+giveMoney(100000000)
+giveMoney(500000000)
+giveMoney(1000000000)
+giveMoney(10000000000)
+giveMoney(100000000000)
+
+-- Theme Change Buttons
+local function setTheme(themeName)
+    return TabsSettings:CreateButton({
+        Name = themeName,
+        Callback = function()
+            Window:UpdateSettings({Theme = themeName})
+        end
+    })
+end
+
+setTheme("Default")
+setTheme("Amber Glow")
+setTheme("Amethyst")
+setTheme("Bloom")
+setTheme("Dark Blue")
+setTheme("Green")
+setTheme("Light")
+setTheme("Ocean")
+setTheme("Serenity")
