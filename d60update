@@ -1,1 +1,181 @@
-do local v0=loadstring(game:HttpGet("https://sirius.menu/rayfield"))();local v1=v0:CreateWindow({Name="Devil60 Premium ðŸ‘‘",Icon=1954 -(508 + 1446) ,LoadingTitle="Devil60 Universal Premium ðŸ‘‘",LoadingSubtitle="by Devil60 ðŸ€",Theme="Amethyst",DisableRayfieldPrompts=false,DisableBuildWarnings=false,ConfigurationSaving={Enabled=true,FolderName="saves",FileName="Big Hub"},Discord={Enabled=false,Invite="noinvitelink",RememberJoins=true},KeySystem=false,KeySettings={Title="Devil60 universal",Subtitle="Key System",Note="No method of obtaining the key is provided",FileName="Key",SaveKey=true,GrabKeyFromSite=false,Key={"Hey"}}});local v2=v1:CreateTab("Home ðŸ ",997 -(915 + 82) );local v3=v2:CreateSection("Home");local v4=v2:CreateParagraph({Title="Welcome To Devil60 Universal Premium",Content="Hello Guys This Is My First Ever Script Hub More Games Are Releasing Soon I Just Wanted To Show What I Can Do With Remote Functions EG. Hotel Elephant With The Remote Money Feature I Will Be Publishing More Scripts Soon And More Menus / Tab Updates Soon!"});local v5=v1:CreateTab("SS scripts ðŸ“œ",0 -0 );local v6=v5:CreateSection("All These Universal Scripts Are ServerSided So Others Can See!");local v7=v1:CreateTab("CS scripts ðŸ“œ",0 + 0 );local v8=v7:CreateSection("All These Universal Scripts Are ClientSided So Others Cant See!");local v9=v1:CreateTab("Hotel Elephant Give ðŸ“œ",0 -0 );local v10=v9:CreateSection("WARNING THERE ARE SHIT TONES OF MONEY OPTIONS SO SPENDUP");local v11=v1:CreateTab("Voice Chat Options ðŸ”Š",1187 -(1069 + 118) );local v12=v11:CreateSection("For the unban u cannot use it when leaving the game  or exiting roblox and you will be again banned so as soon as you get banned run the script! ðŸ“œ");local v13=v1:CreateTab("settings âš™ï¸",0 -0 );local v14=v13:CreateSection("change theme");local function v15(v23,v24,v25) return v23:CreateButton({Name=v24,Callback=function() loadstring(game:HttpGet(v25))();end});end v15(v2,"Destroy","https://sirius.menu/rayfield");v15(v5,"Universal HUG R15 R6","https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG");v15(v5,"Universal Usercreation V4 key is cartiwontdrop","https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua");v15(v5,"Universal Chat Art Press E","https://raw.githubusercontent.com/AKadminlol/Chatdraw/refs/heads/main/Chattdraw");v15(v5,"Universal Invisible GUI Seversided","https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/UniversalInvis.lua");v15(v5,"Universal Global Chat Join Anyone","https://raw.githubusercontent.com/ThacG/Xyros/refs/heads/main/test");v15(v5,"Universal Game Prober","https://raw.githubusercontent.com/Joystickplays/gameprober-lua/main/gp.lua");v15(v5,"Universal DEX Explorer","https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt");v15(v5,"Universal Infinite Yeild FE","https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source");v15(v7,"Universal C00LKID GUI","game:GetObjects('rbxassetid://8127297852')[1].Source");v15(v7,"Universal Gun","https://pastebin.com/raw/cYzyGWyY");v15(v7,"Universal Grab Knife V4","https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua");v15(v9,"Universal ESP WITH HP AND NAME","https://pastebin.com/raw/sdg1EUwB");v15(v11,"VC UNBAN","https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/VCUNBAN%20MODULE");local v16=nil;local v17=v9:CreateDropdown({Name="Select Player",Options={},CurrentOption={"Select a Player"},MultipleOptions=false,Flag="PlayerDropdown",Callback=function(v26) v16=v26;end});local function v18() local v27=0 + 0 ;local v28;while true do if (v27==(0 -0)) then v28={};for v41,v42 in pairs(game.Players:GetPlayers()) do table.insert(v28,v42.Name);end v27=1 + 0 ;end if (v27==1) then v17:UpdateList(v28);if ( not v16 and ( #v28>(0 -0))) then v16=v28[1 + 0 ];end break;end end end game.Players.PlayerAdded:Connect(v18);game.Players.PlayerRemoving:Connect(v18);local v19=v9:CreateInput({Name="Money Value",CurrentValue="",PlaceholderText="Place Money Value Here",RemoveTextAfterFocusLost=false,Flag="Input2",Callback=function(v29) end});local v20=v9:CreateButton({Name="Apply Changes",Callback=function() local v30=791 -(368 + 423) ;local v31;local v32;local v33;local v34;while true do if (v30==(0 -0)) then v31=v16;v32=tonumber(v19.Text);v30=1;end if (v30==(21 -(10 + 8))) then v34=v33(v31);if v34 then local v44=0 -0 ;while true do if (0==v44) then game:GetService("ReplicatedStorage").MoneyRequest:FireServer(false,v32,"Cash",v34);v0:Notify({Title="Success",Content="Money sent to player!",Duration=445 -(416 + 26) });break;end end else v0:Notify({Title="Error",Content="Player not found!",Duration=9 -6 });end break;end if (v30==(1 + 0)) then if ( not v31 or (v31=="")) then v0:Notify({Title="Error",Content="Player name cannot be empty!",Duration=3 + 0 });return;end if ( not v32 or (v32<=(0 -0))) then local v45=438 -(145 + 293) ;local v46;while true do if (v45==(430 -(44 + 386))) then v46=1486 -(998 + 488) ;while true do if ((0 + 0)==v46) then v0:Notify({Title="Error",Content="Invalid money value!",Duration=3 + 0 });return;end end break;end end end v30=774 -(201 + 571) ;end if (v30==(1140 -(116 + 1022))) then local v40=0 -0 ;while true do if (v40==(0 -0)) then v33=nil;function v33(v49) local v50=0 -0 ;local v51;while true do if (v50==(0 + 0)) then v51=0 -0 ;while true do if (v51==(0 -0)) then for v52,v53 in ipairs(game.Players:GetPlayers()) do if (v53.Name==v49) then return v53;end end return nil;end end break;end end end v40=860 -(814 + 45) ;end if (v40==(3 -2)) then v30=7 -4 ;break;end end end end end});local function v21(v35) return v9:CreateButton({Name="Give All "   .. v35 ,Callback=function() local v37=0 + 0 ;local v38;local v39;while true do if (v37==(0 + 0)) then v38=false;v39="Cash";v37=1;end if (v37==1) then for v47,v48 in pairs(game.Players:GetChildren()) do game:GetService("ReplicatedStorage").MoneyRequest:FireServer(v38,v35,v39,v48);end break;end end end});end v21(1885 -(261 + 624) );v21(17770 -7770 );v21(101080 -(1020 + 60) );v21(501423 -(630 + 793) );v21(3388666 -2388666 );v21(5001930 -(1869 + 61) );v21(47347582 -37347582 );v21(100000000);v21(500000000);v21(1325279734 -325279734 );v21(9909634125 --90365875 );v21(100000000000);local function v22(v36) return v13:CreateButton({Name=v36,Callback=function() v1:UpdateSettings({Theme=v36});end});end v22("Default");v22("Amber Glow");v22("Amethyst");v22("Bloom");v22("Dark Blue");v22("Green");v22("Light");v22("Ocean");v22("Serenity"); end
+local rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+local window = rayfield:CreateWindow({
+    Name = "Devil60 Premium",
+    Icon = nil,
+    LoadingTitle = "Devil60 Universal Premium",
+    LoadingSubtitle = "by Devil60",
+    Theme = "Amethyst",
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false,
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = "saves",
+        FileName = "Big Hub"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "noinvitelink",
+        RememberJoins = true
+    },
+    KeySystem = false,
+    KeySettings = {
+        Title = "Devil60 Universal",
+        Subtitle = "Key System",
+        Note = "No method of obtaining the key is provided",
+        FileName = "Key",
+        SaveKey = true,
+        GrabKeyFromSite = false,
+        Key = {"Hey"}
+    }
+})
+
+-- Home Tab
+local homeTab = window:CreateTab("Home")
+local homeSection = homeTab:CreateSection("Home")
+homeTab:CreateParagraph({
+    Title = "Welcome To Devil60 Universal Premium",
+    Content = "Hello Guys, This Is My First Ever Script Hub. More Games Are Releasing Soon!\nI Just Wanted To Show What I Can Do With Remote Functions, e.g., Hotel Elephant With The Remote Money Feature.\nI Will Be Publishing More Scripts Soon And More Menus / Tab Updates Soon!"
+})
+
+-- Server-Side Scripts Tab
+local ssTab = window:CreateTab("SS Scripts")
+local ssSection = ssTab:CreateSection("All These Universal Scripts Are Server-Sided So Others Can See!")
+
+-- Client-Side Scripts Tab
+local csTab = window:CreateTab("CS Scripts")
+local csSection = csTab:CreateSection("All These Universal Scripts Are Client-Sided So Others Can't See!")
+
+-- Hotel Elephant Tab
+local hotelTab = window:CreateTab("Hotel Elephant Give")
+local hotelSection = hotelTab:CreateSection("WARNING: There are a lot of money options, so spend wisely!")
+
+-- Voice Chat Options Tab
+local vcTab = window:CreateTab("Voice Chat Options")
+local vcSection = vcTab:CreateSection("For the unban, you cannot use it when leaving the game or exiting Roblox. As soon as you get banned, run the script!")
+
+-- Settings Tab
+local settingsTab = window:CreateTab("Settings")
+local settingsSection = settingsTab:CreateSection("Change Theme")
+
+-- Helper Functions
+local function createButton(tab, name, url)
+    tab:CreateButton({
+        Name = name,
+        Callback = function()
+            loadstring(game:HttpGet(url))()
+        end
+    })
+end
+
+-- Adding Buttons
+createButton(homeTab, "Destroy", "https://sirius.menu/rayfield")
+createButton(ssTab, "Universal HUG R15 R6", "https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG")
+createButton(ssTab, "Universal Usercreation V4", "https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua")
+createButton(ssTab, "Universal Chat Art Press E", "https://raw.githubusercontent.com/AKadminlol/Chatdraw/refs/heads/main/Chattdraw")
+createButton(ssTab, "Universal Invisible GUI Server-Sided", "https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/UniversalInvis.lua")
+createButton(ssTab, "Universal Global Chat Join Anyone", "https://raw.githubusercontent.com/ThacG/Xyros/refs/heads/main/test")
+createButton(ssTab, "Universal Game Prober", "https://raw.githubusercontent.com/Joystickplays/gameprober-lua/main/gp.lua")
+createButton(ssTab, "Universal DEX Explorer", "https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt")
+createButton(ssTab, "Universal Infinite Yield FE", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+createButton(csTab, "Universal C00LKID GUI", "game:GetObjects('rbxassetid://8127297852')[1].Source")
+createButton(csTab, "Universal Gun", "https://pastebin.com/raw/cYzyGWyY")
+createButton(csTab, "Universal Grab Knife V4", "https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua")
+createButton(hotelTab, "Universal ESP WITH HP AND NAME", "https://pastebin.com/raw/sdg1EUwB")
+createButton(vcTab, "VC UNBAN", "https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/VCUNBAN%20MODULE")
+
+-- Player Selection for Money
+local selectedPlayer = nil
+local playerDropdown = hotelTab:CreateDropdown({
+    Name = "Select Player",
+    Options = {},
+    CurrentOption = {"Select a Player"},
+    MultipleOptions = false,
+    Flag = "PlayerDropdown",
+    Callback = function(player)
+        selectedPlayer = player
+    end
+})
+
+-- Update Player List
+local function updatePlayerList()
+    local players = {}
+    for _, player in pairs(game.Players:GetPlayers()) do
+        table.insert(players, player.Name)
+    end
+    playerDropdown:UpdateList(players)
+    if not selectedPlayer and #players > 0 then
+        selectedPlayer = players[1]
+    end
+end
+
+game.Players.PlayerAdded:Connect(updatePlayerList)
+game.Players.PlayerRemoving:Connect(updatePlayerList)
+
+-- Money Input and Apply Changes
+local moneyInput = hotelTab:CreateInput({
+    Name = "Money Value",
+    CurrentValue = "",
+    PlaceholderText = "Enter Money Value",
+    RemoveTextAfterFocusLost = false,
+    Flag = "Input2",
+    Callback = function() end
+})
+
+hotelTab:CreateButton({
+    Name = "Apply Changes",
+    Callback = function()
+        if not selectedPlayer or selectedPlayer == "" then
+            rayfield:Notify({
+                Title = "Error",
+                Content = "Player name cannot be empty!",
+                Duration = 3
+            })
+            return
+        end
+
+        local moneyValue = tonumber(moneyInput.Text)
+        if not moneyValue or moneyValue <= 0 then
+            rayfield:Notify({
+                Title = "Error",
+                Content = "Invalid money value!",
+                Duration = 3
+            })
+            return
+        end
+
+        local targetPlayer = nil
+        for _, player in pairs(game.Players:GetPlayers()) do
+            if player.Name == selectedPlayer then
+                targetPlayer = player
+                break
+            end
+        end
+
+        if targetPlayer then
+            game:GetService("ReplicatedStorage").MoneyRequest:FireServer(false, moneyValue, "Cash", targetPlayer)
+            rayfield:Notify({
+                Title = "Success",
+                Content = "Money sent to player!",
+                Duration = 5
+            })
+        else
+            rayfield:Notify({
+                Title = "Error",
+                Content = "Player not found!",
+                Duration = 3
+            })
+        end
+    end
+})
+
+-- Theme Buttons
+local themes = {"Default", "Amber Glow", "Amethyst", "Bloom", "Dark Blue", "Green", "Light", "Ocean", "Serenity"}
+for _, theme in ipairs(themes) do
+    settingsTab:CreateButton({
+        Name = theme,
+        Callback = function()
+            window:UpdateSettings({ Theme = theme })
+        end
+    })
+end
