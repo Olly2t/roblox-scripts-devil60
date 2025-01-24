@@ -1,0 +1,227 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+  Name = "💎PREMIUM D60 HUB V2💎",
+  Icon = hammer,
+  LoadingTitle = "💎PREMIUM D60 HUB V2💎",
+  LoadingSubtitle = "V2 UPDATE",
+  Theme = "DarkBlue",
+
+  DisableRayfieldPrompts = false,
+  DisableBuildWarnings = false,
+
+  ConfigurationSaving = {
+    Enabled = true,
+    FolderName = "Bigballs",
+    FileName = "RobloxChatServiceV2"
+  },
+
+  Discord = {
+    Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+    Invite = "syG8dcSu6Q", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+    RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+  },
+
+  KeySystem = true, -- Set this to true to use our key system
+  KeySettings = {
+    Title = "💎PREMIUM D60 HUB V2💎",
+    Subtitle = "Key System",
+    Note = "Grab The Key From Discord Or Site",
+    FileName = "highly98987",
+    SaveKey = true,
+    GrabKeyFromSite = true,
+    Key = {"D60ONTOP"}
+  }
+})
+
+local Tab1 = Window:CreateTab("Home", "app-window")
+local Tab2 = Window:CreateTab("Troll", "bug")
+local Tab3 = Window:CreateTab("Voice Chat", "mic")
+local Tab4 = Window:CreateTab("Essential Scripts", "scroll")
+local Tab5 = Window:CreateTab("ESP Hubs", "person-standing")
+
+local Button = Tab3:CreateButton({
+  Name = "Voice Chat Unban 🔊",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Unbanned",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/VCUNBAN%20MODULE"))()
+  end,
+})
+
+local Button = Tab1:CreateButton({
+  Name = "Quit ❌",
+  Callback = function()
+    Rayfield:Destroy()
+  end,
+})
+
+local Button = Tab2:CreateButton({
+  Name = "FE Invisible Troll",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/InvisibleTrollScript"))()
+  end,
+})
+
+local Button = Tab2:CreateButton({
+  Name = "FE Hug R6 / R15",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/JSFKGBASDJKHIOAFHDGHIUODSGBJKLFGDKSB/fe/refs/heads/main/FEHUGG"))()
+  end,
+})
+
+local Button = Tab5:CreateButton({
+  Name = "UnnamedESP",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))() end)
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "Owl Hub",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "Infinite Yield",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "CMD-X",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "AntiIdle",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "AntiIdle Started",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/AntiIdle"))()
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "FPS Graph",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/FPSGraph"))()
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "DarkDex V3",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/Dark%20Dex%20Ls%20Shortcut"))()
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "SomeSilentAimLOL",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Olly2t/roblox-scripts-devil60/refs/heads/main/SomeSilentAim"))()
+  end,
+})
+
+local Button = Tab4:CreateButton({
+  Name = "Orca",
+  Callback = function()
+    Rayfield:Notify({
+      Title = "Script Status",
+      Content = "Worked",
+      Duration = 6.5,
+      Image = "check",
+    })
+
+    -- execute it baba gurl
+  loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
+  end,
+})
