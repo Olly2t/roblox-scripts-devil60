@@ -7,7 +7,7 @@ local Section = Tab1:NewSection("RemoteFunction Toggle")
 local toggleState = false
 local remoteFunction = game:GetService("ReplicatedStorage").events:FindFirstChild("SellAll")
 
-Section:NewToggle("Toggle RemoteFunction", "Toggles the RemoteFunction call", function(state)
+Section:NewToggle("Auto Sell All", "Toggles the RemoteFunction call", function(state)
     toggleState = state
     if toggleState then
         if remoteFunction then
