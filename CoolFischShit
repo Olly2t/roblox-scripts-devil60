@@ -1,0 +1,49 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("FISCH Features", "DarkTheme")
+
+local Tab1 = Window:NewTab("Fisch Autos")
+local Section = Tab1:NewSection("RemoteFunction Toggle")
+
+local toggleState = false
+local remoteFunction = game:GetService("ReplicatedStorage").events:FindFirstChild("SellAll")
+
+Section:NewToggle("Toggle RemoteFunction", "Toggles the RemoteFunction call", function(state)
+    toggleState = state
+    if toggleState then
+        if remoteFunction then
+            remoteFunction:InvokeServer()
+        else
+            print("RemoteFunction not found!")
+        end
+    end
+end)
+
+local Section2 = Tab1:NewSection("Modify Coins")
+Section2:NewButton("Set Coins to 900T", "Sets your coins to 900 trillion", function()
+    local coinsValue = game:GetService("ReplicatedStorage").playerstats.olly06109090.Stats:FindFirstChild("coins")
+    if coinsValue then
+        coinsValue.Value = 900000000000000
+    else
+        print("Coins value not found!")
+    end
+end)
+
+local Section3 = Tab1:NewSection("Modify Level")
+Section3:NewButton("Set Level to 90B", "Sets your level to 90 billion", function()
+    local levelValue = game:GetService("ReplicatedStorage").playerstats.olly06109090.Stats:FindFirstChild("level")
+    if levelValue then
+        levelValue.Value = 90000000000
+    else
+        print("Level value not found!")
+    end
+end)
+
+local Section4 = Tab1:NewSection("Toggle Performance Mode")
+Section4:NewToggle("Toggle Performance Mode", "Toggles the Performance Mode bool value", function(state)
+    local performanceModeValue = game:GetService("ReplicatedStorage").playerstats.olly06109090.Settings:FindFirstChild("performanceMode")
+    if performanceModeValue then
+        performanceModeValue.Value = state
+    else
+        print("PerformanceMode value not found!")
+    end
+end)
